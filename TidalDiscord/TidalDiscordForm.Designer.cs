@@ -1,6 +1,6 @@
 ﻿namespace TidalDiscord
     {
-    partial class Form1
+    partial class TidalDiscordForm
         {
         /// <summary>
         ///  Required designer variable.
@@ -29,20 +29,20 @@
         private void InitializeComponent()
             {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TidalDiscordForm));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.darkLabel1 = new DarkUI.Controls.DarkLabel();
             this.darkLabel2 = new DarkUI.Controls.DarkLabel();
-            this.lblNowPlaying = new DarkUI.Controls.DarkLabel();
+            this.SongLabel = new DarkUI.Controls.DarkLabel();
             this.lblDiscordStatus = new DarkUI.Controls.DarkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
             // 
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            this.timer1.Tick += new System.EventHandler(this.UpdatePresence);
             // 
             // notifyIcon1
             // 
@@ -85,15 +85,15 @@
             this.darkLabel2.Text = "Developed 2022 by @ricardag";
             this.darkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblNowPlaying
+            // SongLabel
             // 
-            this.lblNowPlaying.AutoEllipsis = true;
-            this.lblNowPlaying.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.lblNowPlaying.Location = new System.Drawing.Point(110, 55);
-            this.lblNowPlaying.Name = "lblNowPlaying";
-            this.lblNowPlaying.Size = new System.Drawing.Size(402, 15);
-            this.lblNowPlaying.TabIndex = 2;
-            this.lblNowPlaying.Text = "Now playing";
+            this.SongLabel.AutoEllipsis = true;
+            this.SongLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.SongLabel.Location = new System.Drawing.Point(110, 55);
+            this.SongLabel.Name = "SongLabel";
+            this.SongLabel.Size = new System.Drawing.Size(402, 15);
+            this.SongLabel.TabIndex = 2;
+            this.SongLabel.Text = "Now playing";
             // 
             // lblDiscordStatus
             // 
@@ -113,7 +113,7 @@
             this.ClientSize = new System.Drawing.Size(525, 133);
             this.Controls.Add(this.lblDiscordStatus);
             this.Controls.Add(this.darkLabel2);
-            this.Controls.Add(this.lblNowPlaying);
+            this.Controls.Add(this.SongLabel);
             this.Controls.Add(this.darkLabel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -137,7 +137,7 @@
         private PictureBox pictureBox1;
         private DarkUI.Controls.DarkLabel darkLabel1;
         private DarkUI.Controls.DarkLabel darkLabel2;
-        private DarkUI.Controls.DarkLabel lblNowPlaying;
+        private DarkUI.Controls.DarkLabel SongLabel;
         private DarkUI.Controls.DarkLabel lblDiscordStatus;
         }
     }
