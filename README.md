@@ -22,6 +22,8 @@ Simply download the required installer from the [releases](https://github.com/ri
 
 ### How to build
 
+You need to add your own tidal app token before building, see notes in `TidalDiscordForm.cs`
+
 I've used **Microsoft Visual Studio 2022** to develop and build the application. There is a VS solution (TidalDiscord.sln) and a project (DiscordTidal/TidalDiscord.csproj) on the source code.
 
 **TidalDiscord** uses .NET Desktop Runtime 6+. If required, [download](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime) and install it directly from Microsoft.
