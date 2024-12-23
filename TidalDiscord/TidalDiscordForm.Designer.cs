@@ -27,109 +27,108 @@
         ///  the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
-            {
-            this.components = new System.ComponentModel.Container();
+        {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TidalDiscordForm));
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.darkLabel1 = new DarkUI.Controls.DarkLabel();
-            this.darkLabel2 = new DarkUI.Controls.DarkLabel();
-            this.SongLabel = new DarkUI.Controls.DarkLabel();
-            this.lblDiscordStatus = new DarkUI.Controls.DarkLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            timer1 = new System.Windows.Forms.Timer(components);
+            notifyIcon1 = new NotifyIcon(components);
+            pictureBox1 = new PictureBox();
+            darkLabel1 = new DarkUI.Controls.DarkLabel();
+            darkLabel2 = new DarkUI.Controls.DarkLabel();
+            SongLabel = new DarkUI.Controls.DarkLabel();
+            lblDiscordStatus = new DarkUI.Controls.DarkLabel();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // timer1
             // 
-            this.timer1.Tick += new System.EventHandler(this.UpdatePresence);
+            timer1.Tick += UpdatePresence;
             // 
             // notifyIcon1
             // 
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
-            this.notifyIcon1.Click += new System.EventHandler(this.IconClick);
+            notifyIcon1.Icon = (Icon)resources.GetObject("notifyIcon1.Icon");
+            notifyIcon1.Text = "notifyIcon1";
+            notifyIcon1.Visible = true;
+            notifyIcon1.Click += IconClick;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(91, 87);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.AccessibleRole = AccessibleRole.None;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(6, 9);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(91, 87);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // darkLabel1
             // 
-            this.darkLabel1.AutoSize = true;
-            this.darkLabel1.Font = new System.Drawing.Font("Segoe UI", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.darkLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.darkLabel1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.darkLabel1.Location = new System.Drawing.Point(98, 0);
-            this.darkLabel1.Name = "darkLabel1";
-            this.darkLabel1.Size = new System.Drawing.Size(415, 37);
-            this.darkLabel1.TabIndex = 1;
-            this.darkLabel1.Text = "TIDAL Rich Presence on Discord";
+            darkLabel1.AutoSize = true;
+            darkLabel1.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            darkLabel1.ForeColor = Color.FromArgb(220, 220, 220);
+            darkLabel1.ImageAlign = ContentAlignment.TopLeft;
+            darkLabel1.Location = new Point(98, 0);
+            darkLabel1.Name = "darkLabel1";
+            darkLabel1.Size = new Size(415, 37);
+            darkLabel1.TabIndex = 1;
+            darkLabel1.Text = "TIDAL Rich Presence on Discord";
             // 
             // darkLabel2
             // 
-            this.darkLabel2.Font = new System.Drawing.Font("Segoe UI", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.darkLabel2.ForeColor = System.Drawing.Color.Silver;
-            this.darkLabel2.Location = new System.Drawing.Point(12, 105);
-            this.darkLabel2.Name = "darkLabel2";
-            this.darkLabel2.Size = new System.Drawing.Size(500, 15);
-            this.darkLabel2.TabIndex = 4;
-            this.darkLabel2.Text = "Developed 2022 by @ricardag";
-            this.darkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            darkLabel2.Font = new Font("Segoe UI", 8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            darkLabel2.ForeColor = Color.Silver;
+            darkLabel2.Location = new Point(12, 105);
+            darkLabel2.Name = "darkLabel2";
+            darkLabel2.Size = new Size(500, 15);
+            darkLabel2.TabIndex = 4;
+            darkLabel2.Text = "Developed 2024 by @ricardag @CamelCaseName";
+            darkLabel2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // SongLabel
             // 
-            this.SongLabel.AutoEllipsis = true;
-            this.SongLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.SongLabel.Location = new System.Drawing.Point(110, 55);
-            this.SongLabel.Name = "SongLabel";
-            this.SongLabel.Size = new System.Drawing.Size(402, 15);
-            this.SongLabel.TabIndex = 2;
-            this.SongLabel.Text = "Now playing";
+            SongLabel.AutoEllipsis = true;
+            SongLabel.ForeColor = Color.FromArgb(220, 220, 220);
+            SongLabel.Location = new Point(110, 55);
+            SongLabel.Name = "SongLabel";
+            SongLabel.Size = new Size(402, 15);
+            SongLabel.TabIndex = 2;
+            SongLabel.Text = "nothing";
             // 
             // lblDiscordStatus
             // 
-            this.lblDiscordStatus.AutoEllipsis = true;
-            this.lblDiscordStatus.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDiscordStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.lblDiscordStatus.Location = new System.Drawing.Point(110, 76);
-            this.lblDiscordStatus.Name = "lblDiscordStatus";
-            this.lblDiscordStatus.Size = new System.Drawing.Size(402, 15);
-            this.lblDiscordStatus.TabIndex = 5;
-            this.lblDiscordStatus.Text = "Discord status";
+            lblDiscordStatus.AutoEllipsis = true;
+            lblDiscordStatus.Font = new Font("Segoe UI", 7F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDiscordStatus.ForeColor = Color.FromArgb(220, 220, 220);
+            lblDiscordStatus.Location = new Point(110, 76);
+            lblDiscordStatus.Name = "lblDiscordStatus";
+            lblDiscordStatus.Size = new Size(402, 15);
+            lblDiscordStatus.TabIndex = 5;
+            lblDiscordStatus.Text = "Discord status";
             // 
-            // Form1
+            // TidalDiscordForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(525, 133);
-            this.Controls.Add(this.lblDiscordStatus);
-            this.Controls.Add(this.darkLabel2);
-            this.Controls.Add(this.SongLabel);
-            this.Controls.Add(this.darkLabel1);
-            this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TIDAL Rich Presence on Discord";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_Closing);
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.Resize += new System.EventHandler(this.Form1_Resize);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
-            }
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(525, 133);
+            Controls.Add(lblDiscordStatus);
+            Controls.Add(darkLabel2);
+            Controls.Add(SongLabel);
+            Controls.Add(darkLabel1);
+            Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            Name = "TidalDiscordForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "TIDAL Rich Presence on Discord";
+            FormClosing += Form1_Closing;
+            Load += Form1_Load;
+            Resize += Form1_Resize;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
 
         #endregion
         private System.Windows.Forms.Timer timer1;
